@@ -1,5 +1,5 @@
 import React from 'react'
-import '.NewCollections.css' from NewCollections
+import './NewCollection/NewCollection.css'
 import new_collections from './Assets/newCollection'
 const NewCollections = () => {
     return (

@@ -3,9 +3,10 @@ import { useState } from "react"
 import './Navbar.css'
 import logo from "../Assets/logo.png"
 import cart_icon from '../Assets/carrito.png'
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
-    const [menu, setMenu] = useState("tienda")
+    const [menu, setMenu] = useState("Tienda")
     return (
         <div className='navbar'>
             <div className="nav-logo">
@@ -13,14 +14,14 @@ const Navbar = () => {
                 <p>Tienda De Ropa en Linea</p>
             </div>
             <ul className='nav-menu'>
-                <li onClick={() => { setMenu("tienda") }}><link style={{ textDecoration: 'none' }} to='/'>Tienda</link>{menu === 'tienda' ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu('hombres') }}><link style={{ textDecoration: 'none' }} to='/hombres'>Hombre</link>{menu === 'hombres' ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu('mujeres') }}><link style={{ textDecoration: 'none' }} to='/mujeres'>Mujer</link>{menu === 'mujeres' ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu('ninos') }}><link style={{ textDecoration: 'none' }} to='/ninos'>Ninos</link>{menu === 'ninos' ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu("Tienda") }}><Link style={{ textDecoration: 'none' }} to='/'>Tienda</Link>{menu === 'Tienda' ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu('hombres') }}><Link style={{ textDecoration: 'none' }} to='/hombres'>Hombre</Link>{menu === 'hombres' ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu('mujeres') }}><Link style={{ textDecoration: 'none' }} to='/mujeres'>Mujer</Link>{menu === 'mujeres' ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu('ninos') }}><Link style={{ textDecoration: 'none' }} to='/ninos'>Ninos</Link>{menu === 'ninos' ? <hr /> : <></>}</li>
             </ul>
             <div className='nav-login-cart'>
-                <link to='/login'><button>Login</button></link>
-                <link to='/carrito'><img src={cart_icon} alt="" /></link>
+                <button><Link to='/login'>Button</Link></button>
+                <img src={cart_icon} alt="" /><link to='/carrito'></link>
                 <div className="nav-cart-count">0</div>
 
             </div>

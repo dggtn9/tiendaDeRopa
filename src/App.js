@@ -1,23 +1,27 @@
 import './App.css';
-import Navbar from './Components/NavBar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Tienda from './Pages/Tienda';
+import Navbar from '../src/Components/Navbar/Navbar';
+import Categorias from './Pages/Categorias';
+import Productos from './Pages/Productos'
+import CarritoCompras from './Pages/CarritoCompras';
+import LoginIniciarSesion from './Pages/LoginIniciarSesion'
 function App() {
   return (
     <div>
-      <BrowserRouter />
+      <BrowserRouter>
       <Navbar />
-      <Routes />
-      <Route path='/' element={<tienda />} />
-      <Route path='/hombres' element={<categorias categoria="hombres" />} />
-      <Route path='/mujeres' element={<tienda categoria="mujeres" />} />
-      <Route path='/ninos' element={<tienda categoria="ninos" />} />
-      <Route path="/productos" element={<producto />} />
-      <Route path="/productoId" element={<producto />} />
-      <Route path="/carritoCompras" element={<carritoCompras />} />
-      <Route path='/IniciarSesion' element={<iniciarSesion />} />
-      <Routes />
-      <BrowserRouter />
+      <Routes>
+        <Route path='/' element={<Tienda />} />
+        <Route path='/hombres' element={<Categorias categoria="hombres" />} />
+        <Route path='/mujeres' element={<Categorias categoria="mujeres" />} />
+        <Route path='/ninos' element={<Categorias categoria="ninos" />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/productoId" element={<Productos />} />
+        <Route path="/carritoCompras" element={<CarritoCompras />} />
+        <Route path='/IniciarSesion' element={<LoginIniciarSesion />} />
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }

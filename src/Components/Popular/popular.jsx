@@ -1,5 +1,5 @@
 import React from 'react'
-import 'Popular.css'
+import 'popular.css'
 
 const Popular = () => {
     return (

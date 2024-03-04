@@ -1,13 +1,16 @@
 import React from "react"
-import NewCollections from "../Components/NewCollection/NewCollection"
+// import NewCollections from "../Components/NewCollection/NewCollection"
+// import Popular from "../Components/Popular/Popular"
+// import Offers  from "../Components/Offers/Offers"
+// import Hero from "../Components/Hero/Hero"
 
 const Tienda = () => {
     return (
         <div>
-            <Hero />
-            <popular />
-            <Offers />
-            <NewCollections />
+            {/* <Hero/>
+            <Popular/>
+            <Offers/>
+            <NewCollections/> */}
         </div>
     )
 }
