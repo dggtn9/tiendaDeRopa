@@ -1,16 +1,24 @@
 import React from "react"
-// import NewCollections from "../Components/NewCollection/NewCollection"
-// import Popular from "../Components/Popular/Popular"
-// import Offers  from "../Components/Offers/Offers"
-// import Hero from "../Components/Hero/Hero"
+import NewCollections from "../Components/NewCollection/NewCollection"
+import Footer from '../Components/Footer/Footer'
+import Popular from "../Components/Popular/Popular"
+import Offers  from "../Components/Offers/Offers"
+import Hero from "../Components/Hero/Hero"
+import Newsletter from "../Components/Newsletter/Newsletter"
 
 const Tienda = () => {
     return (
         <div>
-            {/* <Hero/>
+        <div>
+            <Hero/>
             <Popular/>
             <Offers/>
-            <NewCollections/> */}
+            <NewCollections/>
+            <Newsletter/>
+        </div>
+        <div>
+        <Footer/>
+        </div>
         </div>
     )
 }

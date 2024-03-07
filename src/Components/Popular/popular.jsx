@@ -1,9 +1,9 @@
 import React from 'react'
-import 'popular.css'
-
+import './popular.css'
+import data_Product from 'react'
 const Popular = () => {
     return (
-        <div className='popular'>
+<div className='popular'>
 <h1>Populares para mujeres:</h1>
 <hr/>
 <div className="popular-item">

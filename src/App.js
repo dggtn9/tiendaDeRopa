@@ -2,10 +2,14 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Tienda from './Pages/Tienda';
 import Navbar from '../src/Components/Navbar/Navbar';
-import Categorias from './Pages/Categorias';
-import Productos from './Pages/Productos'
+import Footer from '../src/Components/Footer/Footer';
+import CategoriaTienda from './Pages/CategoriaTienda';
+import Producto from './Pages/Producto'
 import CarritoCompras from './Pages/CarritoCompras';
 import LoginIniciarSesion from './Pages/LoginIniciarSesion'
+import hombre_banner from './Components/Assets/ropa2.jpg'
+import mujer_banner from './logo.svg'
+import ninos_banner from './logo.svg'
 function App() {
   return (
     <div>
@@ -13,14 +17,15 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Tienda />} />
-        <Route path='/hombres' element={<Categorias categoria="hombres" />} />
-        <Route path='/mujeres' element={<Categorias categoria="mujeres" />} />
-        <Route path='/ninos' element={<Categorias categoria="ninos" />} />
-        <Route path="/productos" element={<Productos />} />
-        <Route path="/productoId" element={<Productos />} />
+        <Route path='/hombres' element={<CategoriaTienda banner={hombre_banner}categoria="hombres" />} />
+        <Route path='/mujeres' element={<CategoriaTienda banner={mujer_banner} categoria="mujeres" />} />
+        <Route path='/ninos' element={<CategoriaTienda banner={ninos_banner}categoria="ninos" />} />
+        <Route path="/producto" element={<Producto />} />
+        <Route path="/productoId" element={<Producto />} />
         <Route path="/carritoCompras" element={<CarritoCompras />} />
         <Route path='/IniciarSesion' element={<LoginIniciarSesion />} />
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </div>
   )
